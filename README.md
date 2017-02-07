@@ -1,12 +1,18 @@
 Math integration with GitBook
 ==============
+
+### 插件风格
+极简
+
 ### 本插件的功能：
 定制页脚
+
 1. 版权信息
 2. 文档更新时间
 
 ### 致敬
 本插件修改至
+
 1. https://github.com/zhj3618/gitbook-plugin-tbfed-pagefooter
 修改原因：原插件的信息不能完全自定义。
 
@@ -53,8 +59,12 @@ You can force the use of svg pre-processed by adding to your book.json:
 $ npm install gitbook-plugin-page-footer-ex --save
 ```
 
->open npm : https://www.npmjs.com/package/page-footer-ex
+>open npm : https://www.npmjs.com/package/gitbook-plugin-page-footer-ex
 
 ### Update record
 #### 2017-02-07
+完成开发。
+
+### 承诺
+只要自己还在使用。就会不断完善
 
