@@ -1,7 +1,7 @@
 {
   "name": "gitbook-plugin-page-footer-ex",
   "version": "0.0.1",
-  "description": "定制每篇文章的页脚，可以添加版权和显示文件修改时间和新增时间",
+  "description": "定制每篇文章的页脚，可以添加版权和显示文件修改时间",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

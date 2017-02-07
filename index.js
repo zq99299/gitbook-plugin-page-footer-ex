@@ -7,14 +7,14 @@ module.exports = {
         css: ["style/plugin.css"]
     },
     hooks: {
-        "page": function (page) {
+        'page:before': function (page) {
             var bookIns = this;
             _start(bookIns, page);
             return page;
         }
     },
     filters: {
-        date: function (d, format) {
+        dateFormat: function (d, format) {
             return moment(d).format(format)
         }
     }

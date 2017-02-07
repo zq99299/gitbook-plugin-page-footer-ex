@@ -8,6 +8,7 @@ Math integration with GitBook
 ### 致敬
 本插件修改至
 1. https://github.com/zhj3618/gitbook-plugin-tbfed-pagefooter
+修改原因：原插件的信息不能完全自定义。
 
 ### How to use it?
 
@@ -35,13 +36,16 @@ You can force the use of svg pre-processed by adding to your book.json:
 {
  "pluginsConfig": {	   
 		"anchor-navigation-ex":{
-			"page-footer-ex":"你的版权信息",
-			"update_label":"更新标签",
-			"update_format":"时间格式如：YYYY-MM-DD HH:mm:ss",
+			"page-footer-ex":"mrcode",
+			"update_label":"update",
+			"update_format":"YYYY-MM-DD HH:mm:ss",
 		}	   
   }	
 }
 ```
+- page-footer-ex ： 你的版权信息，可以是html
+- update_label ： 文档更新时间标签，可以是html
+- update_format ： 时间格式
  
 ### or Install locally
 

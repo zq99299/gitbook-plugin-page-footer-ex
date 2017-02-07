@@ -32,9 +32,8 @@ function start(bookIns, page) {
     var wrap = ' \n\n' +
         '<footer class="page-footer-ex">' +
                 _copy +
-            '<span class="page-footer-ex-footer-update">' +
-                defaultOption.update_label +
-            '\n{{file.mtime | date("' + defaultOption.update_format + '")}}\n' +
+            '<span class="page-footer-ex-footer-update">' + defaultOption.update_label +
+                '\n{{ file.mtime | dateFormat("' + defaultOption.update_format + '") }}\n' +
             '</span>' +
         '</footer>'
     page.content = page.content + wrap;
