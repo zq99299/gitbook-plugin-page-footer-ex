@@ -1,0 +1,51 @@
+{
+  "name": "gitbook-plugin-page-footer-ex",
+  "version": "0.0.1",
+  "description": "定制每篇文章的页脚，可以添加版权和显示文件修改时间和新增时间",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zq99299/gitbook-plugin-page-footer-ex.git"
+  },
+  "keywords": [
+    "gitbook",
+    "plugin",
+	"page-footer-ex",
+	"footer",
+	"ex"
+  ],
+  "author": "zhuqiang",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/zq99299/gitbook-plugin-page-footer-ex/issues"
+  },
+  "homepage": "https://github.com/zq99299/gitbook-plugin-page-footer-ex#readme",
+  "dependencies": {
+    "moment": "^2.10.6"
+  },
+  "engines": {
+    "gitbook": "*"
+  },
+  "gitbook": {
+        "properties": {
+            "copyright": {
+                "type": "string",
+                "default": "for GitBook",
+                "title": "你的版权信息"
+            },
+			"update_label": {
+                "type": "string",
+                "default": "update",
+                "title": "文档更新时间标签内容"
+            },
+			"update_format": {
+                "type": "string",
+                "default": "YYYY-MM-DD HH:mm:ss",
+                "title": "时间格式"
+            }
+        }
+    }
+}
