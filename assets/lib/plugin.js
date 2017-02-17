@@ -31,8 +31,8 @@ function start(bookIns, page) {
     var _copy = '<span class="page-footer-ex-copyright">' + defaultOption.copyright + '</span>'
     var wrap = ' \n\n' +
         '<footer class="page-footer-ex"> ' +
-        '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +
                 _copy +
+            '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +
             '<span class="page-footer-ex-footer-update">' + defaultOption.update_label +
                 '\n{{ file.mtime | dateFormat("' + defaultOption.update_format + '") }}\n' +
             '</span>' +
