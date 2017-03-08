@@ -42,15 +42,15 @@ You can force the use of svg pre-processed by adding to your book.json:
 ```
 {
  "pluginsConfig": {	   
-		"anchor-navigation-ex":{
-			"page-footer-ex":"mrcode",
+		"page-footer-ex":{
+			"copyright":"mrcode",
 			"update_label":"update",
 			"update_format":"YYYY-MM-DD HH:mm:ss",
 		}	   
   }	
 }
 ```
-- page-footer-ex ： 你的版权信息，可以是html
+- copyright ： 你的版权信息，可以是html
 - update_label ： 文档更新时间标签，可以是html
 - update_format ： 时间格式
  
