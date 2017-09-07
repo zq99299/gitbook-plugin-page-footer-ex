@@ -1,43 +1,34 @@
-
-/**
- * 处理默认参数
- * @param defaultOption
- * @param configOption
- */
-function handlerOption(defaultOption, configOption) {
-    if (configOption) {
-        for (var item in defaultOption) {
-            if (item in configOption) {
-                defaultOption[item] = configOption[item];
-            }
-        }
-    }
-}
-
-function start(bookIns, page) {
-    const defaultOption = {
-        copyright: 'for GitBook.',
-        update_label: 'update : ',
-        update_format: 'YYYY-MM-DD HH:mm:ss'
-    }
+module.exports = function(book, page) {
     /**
-     * [configOption: config option]
+     * [config: config option]
      * @type {Object}
      */
-    var configOption = bookIns.config.get('pluginsConfig')['page-footer-ex'];
-    // 处理配置参数
-    handlerOption(defaultOption, configOption);
+    var config = book.config.get('pluginsConfig')['page-footer-ex'];
 
-    var _copy = '<span class="page-footer-ex-copyright">' + defaultOption.copyright + '</span>'
-    var wrap = ' \n\n' +
-        '<footer class="page-footer-ex"> ' +
-                _copy +
-            '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' +
-            '<span class="page-footer-ex-footer-update">' + defaultOption.update_label +
-                '\n{{ file.mtime | dateFormat("' + defaultOption.update_format + '") }}\n' +
-            '</span>' +
-        '</footer>'
-    page.content = page.content + wrap;
+    var wrapIfMarkdown = function(input) {
+        if (!config.markdown) {
+            return input;
+        } else {
+            return book.renderInline('markdown', input);
+        }
+    }
+    // Gitbook Markdown rendering is asynchronous.
+    return Promise.all([wrapIfMarkdown(config.copyright), wrapIfMarkdown(config.update_label)])
+        .then(function(labels) {
+            var copyright = labels[0];
+            var updateLabel = labels[1];
+            page.content += [
+                '<footer class="page-footer-ex">',
+                    '<div class="page-footer-ex-copyright">',
+                        copyright,
+                    '</div>',
+                    '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
+                    '<div class="page-footer-ex-footer-update">',
+                        updateLabel,
+                        '{{ file.mtime | dateFormat("' + config.update_format + '") }}',
+                    '</div>',
+                '</footer>'
+            ].join('\n');
+            return page;
+        });
 }
-
-module.exports = start;

@@ -13,9 +13,9 @@
   "keywords": [
     "gitbook",
     "plugin",
-	"page-footer-ex",
-	"footer",
-	"ex"
+    "page-footer-ex",
+    "footer",
+    "ex"
   ],
   "author": "zhuqiang",
   "license": "GPL-3.0",
@@ -30,22 +30,31 @@
     "gitbook": ">=3.0.0"
   },
   "gitbook": {
-        "properties": {
-            "copyright": {
-                "type": "string",
-                "default": "for GitBook",
-                "title": "你的版权信息"
-            },
-			"update_label": {
-                "type": "string",
-                "default": "update",
-                "title": "文档更新时间标签内容"
-            },
-			"update_format": {
-                "type": "string",
-                "default": "YYYY-MM-DD HH:mm:ss",
-                "title": "时间格式"
-            }
-        }
+    "properties": {
+      "copyright": {
+        "type": "string",
+        "default": "© All Rights Reserved",
+        "title": "你的版权信息",
+        "description": "The left-aligned text in the footer."
+      },
+      "markdown": {
+        "type": "boolean",
+        "default": false,
+        "title": "",
+        "description": "True if copyright and update_label are in Markdown, false if plain text or HTML."
+      },
+      "update_label": {
+        "type": "string",
+        "default": "updated",
+        "title": "文档更新时间标签内容",
+        "description": "Text before date."
+      },
+      "update_format": {
+        "type": "string",
+        "default": "YYYY-MM-DD HH:mm:ss",
+        "title": "时间格式",
+        "description": "Moment.js date format."
+      }
     }
+  }
 }
