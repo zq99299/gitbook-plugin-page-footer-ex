@@ -17,7 +17,7 @@ module.exports = function(book, page) {
         .then(function(labels) {
             var copyright = labels[0];
             var updateLabel = labels[1];
-            page.content += [
+            page.content += '\n\n' + [
                 '<footer class="page-footer-ex">',
                     '<div class="page-footer-ex-copyright">',
                         copyright,
