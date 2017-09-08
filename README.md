@@ -38,7 +38,24 @@ Add it to your `book.json`:
             "copyright": "By <em>author name</em>",
             "markdown": false,
             "update_label": "<i>updated</i>",
-            "update_format": "YYYY-MM-DD HH:mm:ss",
+            "update_format": "YYYY-MM-DD HH:mm:ss"
+        }
+    }
+}
+```
+or
+
+```json
+{
+    "plugins": [
+        "page-footer-ex"
+    ],
+    "pluginsConfig": {
+        "page-footer-ex": {
+            "copyright": "[mrcode](https://github.com/zq99299)",
+            "markdown": true,
+            "update_label": "<i>updated</i>",
+            "update_format": "YYYY-MM-DD HH:mm:ss"
         }
     }
 }
@@ -76,6 +93,9 @@ Add it to your `book.json`:
 ```
 
 ### Update record
+#### v0.1.0 2017-09-08
+ - Support Markdown-rendered footer ==> BETA，Stability and compatibility remain to be used
+ - 支持Markdown格式的copyright和update_label ==> BETA 版，稳定和兼容性还有待使用反馈
 
 #### v0.0.4 2017-02-17
 

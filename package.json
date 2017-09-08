@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-page-footer-ex",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "定制每篇文章的页脚，可以添加版权和显示文件修改时间",
   "main": "index.js",
   "scripts": {
@@ -40,7 +40,7 @@
       "markdown": {
         "type": "boolean",
         "default": false,
-        "title": "",
+        "title": "是否支持Markdown格式信息",
         "description": "True if copyright and update_label are in Markdown, false if plain text or HTML."
       },
       "update_label": {

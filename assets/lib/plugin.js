@@ -1,5 +1,6 @@
 module.exports = function(book, page) {
     /**
+     * 在package.json中配置的默认值，这里可以直接使用
      * [config: config option]
      * @type {Object}
      */
