@@ -28,7 +28,7 @@ module.exports = function(book, page) {
                         '{{ file.mtime | dateFormat("' + config.update_format + '") }}',
                     '</div>',
                 '</footer>'
-            ].join('\n');
+            ].join(' ');
             return page;
         });
 }
