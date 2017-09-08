@@ -20,14 +20,14 @@ module.exports = function(book, page) {
             var updateLabel = labels[1];
             page.content += '\n\n' + [
                 '<footer class="page-footer-ex">',
-                    '<div class="page-footer-ex-copyright">',
+                    '<span class="page-footer-ex-copyright">',
                         copyright,
-                    '</div>',
+                    '</span>',
                     '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
-                    '<div class="page-footer-ex-footer-update">',
+                    '<span class="page-footer-ex-footer-update">',
                         updateLabel,
                         '{{ file.mtime | dateFormat("' + config.update_format + '") }}',
-                    '</div>',
+                    '</span>',
                 '</footer>'
             ].join(' ');
             return page;
