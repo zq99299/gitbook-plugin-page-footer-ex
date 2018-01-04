@@ -1,5 +1,9 @@
 Page Footer EX for Gitbook
-==============
+==========================
+
+[![GitHub issues](https://img.shields.io/github/issues/zq99299/gitbook-plugin-page-footer-ex.svg)](https://github.com/zq99299/gitbook-plugin-page-footer-ex/issues) [![GitHub issues](https://img.shields.io/github/issues-closed/zq99299/gitbook-plugin-page-footer-ex.svg)](https://github.com/zq99299/gitbook-plugin-page-footer-ex/issues?q=is%3Aissue+is%3Aclosed) [![npm](https://img.shields.io/npm/v/gitbook-plugin-page-footer-ex.svg)](https://www.npmjs.com/package/gitbook-plugin-page-footer-ex) [![npm](https://img.shields.io/npm/dt/gitbook-plugin-page-footer-ex.svg)](https://www.npmjs.com/package/gitbook-plugin-page-footer-ex)
+
+
 
 > A minimalist footer for Gitbook.
 
